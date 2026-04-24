@@ -1,0 +1,27 @@
+target/
+*.iml
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+*.class
+*.log
+.DS_Store
+.env
+.env.local
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Spring Boot
+HELP.md
+.mvn/
+mvnw
+mvnw.cmd

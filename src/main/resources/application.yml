@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: url-shortener
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/urlshortener}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: false
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 2000ms
+
+server:
+  port: 8080
+
+app:
+  base-url: ${APP_BASE_URL:http://localhost:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.rohan.urlshortener: DEBUG
+    org.springframework.cache: DEBUG
