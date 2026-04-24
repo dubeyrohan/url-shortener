@@ -66,7 +66,7 @@ This service uses the **cache-aside pattern**:
 ### Run with Docker Compose (recommended)
 
 ```bash
-git clone https://github.com/<your-username>/url-shortener.git
+git clone https://github.com/dubeyrohan/url-shortener.git
 cd url-shortener
 docker-compose up --build
 ```
@@ -93,7 +93,7 @@ POST /api/v1/urls
 Content-Type: application/json
 
 {
-  "longUrl": "https://example.com/some/very/long/path",
+  "longUrl": "https://randomlongurl.com/some/very/long/path",
   "ttlSeconds": 3600
 }
 ```
@@ -104,7 +104,7 @@ Content-Type: application/json
 {
   "shortCode": "aB3xK9z",
   "shortUrl": "http://localhost:8080/aB3xK9z",
-  "longUrl": "https://example.com/some/very/long/path",
+  "longUrl": "https://randomlongurl.com/some/very/long/path",
   "createdAt": "2025-04-24T10:15:00",
   "expiresAt": "2025-04-24T11:15:00",
   "clickCount": 0
